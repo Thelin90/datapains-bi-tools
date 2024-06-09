@@ -139,7 +139,9 @@ extraVolumeMounts: []
 # -- A dictionary of overrides to append at the end of superset_config.py - the name does not matter
 # WARNING: the order is not guaranteed
 # Files can be passed as helm --set-file configOverrides.my-override=my-file.py
-configOverrides: {}
+configOverrides:
+  secret: |
+    SECRET_KEY = 'u87Y4OK5XEzl2YB/EGRDoRp19558h1YMC/9mHkVt+OveLr8J7I3y+Zur'
   # extend_timeout: |
   #    # Extend timeout to allow long running queries.
   #    SUPERSET_WEBSERVER_TIMEOUT = ...
